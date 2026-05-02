@@ -15,6 +15,7 @@ A personal repository documenting my journey learning Go (Golang), from the basi
 │   ├── goroutines/                  # 5 goroutine patterns (basic, WaitGroup, worker pool, select, leak prevention)
 │   ├── interfaces/                  # Interfaces — shapes, payment system, type assertions, nil gotcha, composition
 │   ├── learn-pointers/              # Pointers — basics, nil, functions, struct fields, common patterns
+│   ├── mutex/                       # Mutex — race conditions, sync.Mutex, sync.RWMutex, sync/atomic, real-world examples
 │   └── structs-and-composition/     # Structs — embedding, receivers, JSON tags, anonymous structs, best practices
 └── go.mod                           # Go module definition
 ```
@@ -50,6 +51,12 @@ go run examples/learn-pointers/pointers_complete.go
 
 # Structs & Composition
 go run examples/structs-and-composition/structs_and_composition.go
+
+# Mutex & Synchronization
+go run examples/mutex/main.go
+
+# Run with race detector (to see race conditions)
+go run -race examples/mutex/main.go
 ```
 
 ## What I've Learned So Far
@@ -107,6 +114,15 @@ go run examples/structs-and-composition/structs_and_composition.go
 - [x] Error wrapping (`fmt.Errorf` with `%w`)
 - [x] `defer` for cleanup
 - [x] Panic and recover
+
+### Synchronization & Mutex
+- [x] Race conditions (what happens without synchronization)
+- [x] `sync.Mutex` (Lock/Unlock to protect shared state)
+- [x] `sync.RWMutex` (multiple readers, single writer)
+- [x] `sync/atomic` (preferred for simple counters)
+- [x] Lock hygiene (don't sleep or do I/O inside locks)
+- [x] Real-world examples: bank account, ticket booking, safe cache
+- [x] Best practices (validate before lock, keep critical sections short, use `-race` detector)
 
 ## Resources
 
