@@ -5,6 +5,21 @@ import (
 	"sync"
 )
 
+// ===========================
+// 1. avoid copying large data (performance)
+//  	Without pointer → full copy
+// 		With pointer → just memory address (faster)
+// 2. Modify original data (not just a copy)
+// 		By default, Go uses pass-by-value, meaning functions work on copies.
+// 3. Efficient memory sharing
+// 		Pointers allow multiple parts of your program to refer to the same data instead of duplicating it.
+// 4. Required for some data structures
+// 		Certain structures can’t work without pointers, like:
+// 	Linked lists
+// 	Trees
+// 	Graphs
+// Because elements need to reference other elements dynamically.
+
 // ============================================================================
 // GO POINTERS - COMPLETE GUIDE (8 sections in one runnable file)
 // Run: go run pointers_complete.go
