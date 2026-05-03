@@ -17,7 +17,8 @@ A personal repository documenting my journey learning Go (Golang), from the basi
 │   ├── waitgroup/                   # Deep-dive WaitGroup tutorial (concepts, examples, common mistakes)
 │   ├── interfaces/                  # Interfaces — shapes, payment system, type assertions, nil gotcha, composition
 │   ├── learn-pointers/              # Pointers — basics, nil, functions, struct fields, common patterns
-│   ├── mutex/                       # Mutex — race conditions, sync.Mutex, sync.RWMutex, sync/atomic, real-world examples
+│   ├── mutex/                       # Mutex — race conditions, sync.Mutex, sync/RWMutex, sync/atomic, real-world examples
+│   ├── slices-and-maps/             # Arrays, slices — declaration, initialization, iteration, value types, make
 │   └── structs-and-composition/     # Structs — embedding, receivers, JSON tags, anonymous structs, best practices
 └── go.mod                           # Go module definition
 ```
@@ -60,6 +61,9 @@ go run examples/structs-and-composition/structs_and_composition.go
 # Mutex & Synchronization
 go run examples/mutex/main.go
 
+# Slices & Maps
+go run examples/slices-and-maps/main.go
+
 # WaitGroup Tutorial (deep-dive with examples & common mistakes)
 go run examples/waitgroup/main.go
 
@@ -74,6 +78,8 @@ go run -race examples/mutex/main.go
 - [x] Pointers (address-of, dereference, nil pointers, passing to functions)
 - [x] Structs (zero values, initialization, factory functions, JSON tags)
 - [x] Anonymous structs (inline definitions, table-driven tests)
+- [x] Arrays (declaration, initialization, compiler-inferred length, value types)
+- [x] Slices (declaration, nil value, make function, underlying array/pointer/length/capacity)
 
 ### Methods & Receivers
 - [x] Value receivers (read-only, small structs)
