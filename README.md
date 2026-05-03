@@ -13,6 +13,7 @@ A personal repository documenting my journey learning Go (Golang), from the basi
 │   ├── context/                     # 10 context patterns (cancellation, timeout, values, HTTP, graceful shutdown, etc.)
 │   ├── go-error-handling/           # Error handling — custom errors, wrapping, defer, panic/recover
 │   ├── goroutines/                  # 5 goroutine patterns (basic, WaitGroup, worker pool, select, leak prevention)
+│   ├── panic_defer_recover/         # Defer, panic, recover — comprehensive single-file example
 │   ├── waitgroup/                   # Deep-dive WaitGroup tutorial (concepts, examples, common mistakes)
 │   ├── interfaces/                  # Interfaces — shapes, payment system, type assertions, nil gotcha, composition
 │   ├── learn-pointers/              # Pointers — basics, nil, functions, struct fields, common patterns
@@ -40,6 +41,9 @@ go run examples/context/context.go
 
 # Error Handling
 go run examples/go-error-handling/errors.go
+
+# Defer, Panic, Recover - Comprehensive Example
+go run examples/panic_defer_recover/main.go
 
 # Goroutines - All Patterns (5 examples)
 go run examples/goroutines/goroutines.go
@@ -118,6 +122,7 @@ go run -race examples/mutex/main.go
 - [x] Error wrapping (`fmt.Errorf` with `%w`)
 - [x] `defer` for cleanup
 - [x] Panic and recover
+- [x] Defer, panic, recover comprehensive example (`examples/panic_defer_recover/`)
 
 ### Synchronization & Mutex
 - [x] Race conditions (what happens without synchronization)
@@ -127,6 +132,8 @@ go run -race examples/mutex/main.go
 - [x] Lock hygiene (don't sleep or do I/O inside locks)
 - [x] Real-world examples: bank account, ticket booking, safe cache
 - [x] Best practices (validate before lock, keep critical sections short, use `-race` detector)
+
+
 
 ## Resources
 
