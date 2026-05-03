@@ -13,6 +13,7 @@ A personal repository documenting my journey learning Go (Golang), from the basi
 │   ├── context/                     # 10 context patterns (cancellation, timeout, values, HTTP, graceful shutdown, etc.)
 │   ├── go-error-handling/           # Error handling — custom errors, wrapping, defer, panic/recover
 │   ├── goroutines/                  # 5 goroutine patterns (basic, WaitGroup, worker pool, select, leak prevention)
+│   ├── waitgroup/                   # Deep-dive WaitGroup tutorial (concepts, examples, common mistakes)
 │   ├── interfaces/                  # Interfaces — shapes, payment system, type assertions, nil gotcha, composition
 │   ├── learn-pointers/              # Pointers — basics, nil, functions, struct fields, common patterns
 │   ├── mutex/                       # Mutex — race conditions, sync.Mutex, sync.RWMutex, sync/atomic, real-world examples
@@ -55,6 +56,9 @@ go run examples/structs-and-composition/structs_and_composition.go
 # Mutex & Synchronization
 go run examples/mutex/main.go
 
+# WaitGroup Tutorial (deep-dive with examples & common mistakes)
+go run examples/waitgroup/main.go
+
 # Run with race detector (to see race conditions)
 go run -race examples/mutex/main.go
 ```
@@ -80,7 +84,7 @@ go run -race examples/mutex/main.go
 
 ### Concurrency
 - [x] Goroutines (lightweight concurrency, `go` keyword)
-- [x] WaitGroup (waiting for goroutines to finish)
+- [x] WaitGroup (waiting for goroutines to finish) — see `examples/waitgroup/` for deep-dive tutorial
 - [x] Channels (unbuffered & buffered)
 - [x] Directional channels (send-only & receive-only)
 - [x] Select statement (multiple channels, timeouts, non-blocking)
