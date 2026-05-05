@@ -21,6 +21,16 @@ A personal repository documenting my journey learning Go (Golang), from the basi
 │   ├── mutex/                       # Mutex — race conditions, sync.Mutex, sync/RWMutex, sync/atomic, real-world examples
 │   ├── slices-and-maps/             # Arrays, slices — declaration, initialization, iteration, value types, make
 │   └── structs-and-composition/     # Structs — embedding, receivers, JSON tags, anonymous structs, best practices
+├── exercises/                      # Practice exercises for learning concepts
+│   ├── safe-divider/              # Error handling — custom sentinel errors
+│   ├── converter/                # Temperature conversion functions
+│   ├── shape-area/                # Interfaces — Shape polymorphism
+│   ├── config-loader/             # JSON parsing — encoding/json
+│   ├── tasks/                     # Slice operations
+│   ├── website-checker/            # Concurrency — goroutines, WaitGroup, channels
+│   ├── log-processor/             # HTTP handler with channel pipeline
+│   ├── sentinel/                 # Package structure — internal packages
+│   └── logstream/                 # Pipeline pattern — producer, transformer, consumer
 └── go.mod                           # Go module definition
 ```
 
@@ -73,6 +83,17 @@ go run examples/waitgroup/main.go
 
 # Run with race detector (to see race conditions)
 go run -race examples/mutex/main.go
+
+# Exercises
+cd exercises/safe-divider && go run divider.go
+cd exercises/converter && go run converter.go
+cd exercises/shape-area && go run shape-area.go
+cd exercises/config-loader && go run loader.go
+cd exercises/tasks && go run tasks.go
+cd exercises/website-checker && go run checker.go
+cd exercises/log-processor && go run processor.go
+cd exercises/sentinel/cmd/sentinel && go run main.go
+cd exercises/logstream/cmd/logstream && go run main.go
 ```
 
 ## What I've Learned So Far
@@ -152,6 +173,17 @@ go run -race examples/mutex/main.go
 - [x] Lock hygiene (don't sleep or do I/O inside locks)
 - [x] Real-world examples: bank account, ticket booking, safe cache
 - [x] Best practices (validate before lock, keep critical sections short, use `-race` detector)
+
+### Exercises Completed
+- [x] safe-divider — custom sentinel errors (ErrNegative, ErrZero)
+- [x] converter — temperature conversion functions
+- [x] shape-area — interfaces with Shape polymorphism
+- [x] config-loader — JSON parsing with encoding/json
+- [x] tasks — slice operations (AddTask, PrintOptions)
+- [x] website-checker — goroutines and WaitGroup for concurrent HTTP checks
+- [x] log-processor — HTTP handler with channel-based logging pipeline
+- [x] sentinel — internal package structure (dashboard, monitor, storage, types)
+- [x] logstream — pipeline pattern (Producer, Transformer, Consumer)
 
 
 
