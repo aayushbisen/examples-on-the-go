@@ -16,6 +16,7 @@ A personal repository documenting my journey learning Go (Golang), from the basi
 │   ├── panic_defer_recover/         # Defer, panic, recover — comprehensive single-file example
 │   ├── waitgroup/                   # Deep-dive WaitGroup tutorial (concepts, examples, common mistakes)
 │   ├── interfaces/                  # Interfaces — shapes, payment system, type assertions, nil gotcha, composition
+│   ├── json/                       # JSON — marshaling, struct tags, omitempty, custom marshalers, streaming, RawMessage, unknown structures
 │   ├── learn-pointers/              # Pointers — basics, nil, functions, struct fields, common patterns
 │   ├── mutex/                       # Mutex — race conditions, sync.Mutex, sync/RWMutex, sync/atomic, real-world examples
 │   ├── slices-and-maps/             # Arrays, slices — declaration, initialization, iteration, value types, make
@@ -51,6 +52,9 @@ go run examples/goroutines/goroutines.go
 
 # Interfaces
 go run examples/interfaces/interfaces.go
+
+# JSON
+go run examples/json/json.go
 
 # Pointers
 go run examples/learn-pointers/pointers_complete.go
@@ -129,6 +133,16 @@ go run -race examples/mutex/main.go
 - [x] `defer` for cleanup
 - [x] Panic and recover
 - [x] Defer, panic, recover comprehensive example (`examples/panic_defer_recover/`)
+
+### JSON (encoding/json)
+- [x] Marshal/Unmarshal (structs, maps, primitives)
+- [x] Struct tags (`json:"name"`, `json:"-"`, `json:",omitempty"`)
+- [x] Custom marshaling (MarshalJSON/UnmarshalJSON)
+- [x] `json.RawMessage` (delayed parsing, embed raw JSON)
+- [x] `json.Encoder` / `json.Decoder` (streaming)
+- [x] Decoding unknown structures (`map[string]any`)
+- [x] `json.Number` (preserve precision vs float64)
+- [x] Embedded structs (promoted fields)
 
 ### Synchronization & Mutex
 - [x] Race conditions (what happens without synchronization)
