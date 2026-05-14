@@ -94,4 +94,76 @@ func main() {
 	var boxes = make([]string, 0, 0)
 
 	fmt.Print(boxes)
+
+	// Declaration
+	// var m map[K]V
+	//
+	var m map[string]int
+
+	fmt.Println(m)
+
+	// A nil map has no keys. Moreover, any attempt to add keys to a nil map will result in a runtime error.
+
+	// Initialization
+	var m = make(map[string]int)
+	fmt.Println(m) // map[]
+
+	// literal
+	var m = map[string]int{
+		"a": 0,
+		"b": 1,
+	}
+
+	fmt.Println(m)
+
+	// with struct
+	type User struct {
+		Name string
+	}
+
+	var m = map[string]User{
+		"a": User{"Peter"},
+		"b": User{"Seth"},
+	}
+
+	fmt.Println(m)
+
+	// add
+
+	var m = map[string]User{
+		"a": {"Peter"},
+		"b": {"Seth"},
+	}
+
+	m["c"] = User{"Steve"}
+
+	fmt.Println(m)
+
+	// retrieve
+	c := m["c"]
+	fmt.Println("Key c:", c)
+
+	// exists
+	// okay pattern
+	c, ok := m["c"]
+	fmt.Println("Key c:", c, ok)
+
+	d, ok := m["d"]
+	fmt.Println("Key d:", d, ok)
+
+	// delete
+	delete(m, "a")
+	//The delete() function doesn't return any value. Also, it doesn't do anything if the key doesn't exist in the map
+
+	// Iteration
+	var m = map[string]User{
+		"a": {"Peter"},
+		"b": {"Seth"},
+	}
+
+	m["c"] = User{"Steve"}
+
+	for key, value := range m {
+		fmt.Println("Key: %s, Value: %v", key, value)
+	}
 }
